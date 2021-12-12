@@ -1,7 +1,9 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import MaterialIcons from 'react-native-vector-icons/MaterialCommunityIcons'
+import MaterialIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import CallActionBox from '../CallActionBox';
+
 const index = () => {
   return (
     <View style={styles.page}>
@@ -9,23 +11,7 @@ const index = () => {
         <Text style={styles.name}>calling</Text>
         <Text style={styles.ringing}>ringing +9172838955</Text>
       </View>
-      <View style={styles.ButtonsContainer}>
-        <View style={styles.iconButton}>
-          <Ionicons name="ios-camera-reverse" size={30} color={'white'} />
-        </View>
-
-        <View style={styles.iconButton}>
-          <MaterialIcons name="camera-off" size={30} color={'white'} />
-        </View>
-
-        <View style={styles.iconButton}>
-          <MaterialIcons name="microphone-off" size={30} color={'white'} />
-        </View>
-
-        <View style={[styles.iconButton, {backgroundColor:"red"}]}>
-          <MaterialIcons name="phone-hangup" size={30} color={'white'} />
-        </View>
-      </View>
+      <CallActionBox />
     </View>
   );
 };
@@ -56,20 +42,4 @@ const styles = StyleSheet.create({
     color: 'white',
   },
 
-  ButtonsContainer: {
-    backgroundColor: '#333333',
-    padding: 20,
-    paddingBottom:40,
-    borderTopLeftRadius: 15,
-    borderTopRightRadius: 15,
-    width: '100%',
-    marginTop: 'auto',
-    flexDirection:'row',
-    justifyContent:'space-between'
-  },
-  iconButton: {
-    backgroundColor: '#4a4a4a',
-    padding: 15,
-    borderRadius: 50,
-  },
 });

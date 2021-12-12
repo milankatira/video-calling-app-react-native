@@ -22,13 +22,16 @@ import ContactsScreen from './src/screen/ContactsScreen';
 
 import CallingScreen from './src/screen/CallingScreen';
 import IncomingCallScreen from './src/screen/IncomingCallScreen';
+import CallScreen from './src/screen/CallScreen';
 const App = () => {
   return (
     <SafeAreaView>
       <StatusBar barStyle={'light-content'} />
       {/* <ContactsScreen/> */}
       {/* <CallingScreen/> */}
-      <IncomingCallScreen/>
+      {/* <IncomingCallScreen/> */}
+  
+      <CallScreen/>
     </SafeAreaView>
   );
 };
