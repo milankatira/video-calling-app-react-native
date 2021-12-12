@@ -19,11 +19,14 @@ import {
 } from 'react-native';
 
 import ContactsScreen from './src/screen/ContactsScreen';
+
+import CallingScreen from './src/screen/CallingScreen';
 const App = () => {
   return (
     <SafeAreaView>
       <StatusBar barStyle={'light-content'} />
-      <ContactsScreen/>
+      {/* <ContactsScreen/> */}
+      <CallingScreen/>
     </SafeAreaView>
   );
 };
